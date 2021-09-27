@@ -40,20 +40,20 @@
 
     <label for="Setting">Order of the posts:</label>
     <select name="Order" id="ord">
-    <option value="<">decreasing</option>
-    <option value=">">increasing</option>
-  </select>
+      <option value="<">decreasing</option>
+      <option value=">">increasing</option>
+    </select>
 
   <button id='order'>Order</button>
 
     </div>
-    
+
       <div id='main'>
         <?php
             $myfile = fopen("Nuovo documento di testo.html", "r") or die("Non è stato possibile caricare il diario");
             echo fread($myfile,filesize("Nuovo documento di testo.html"));
             fclose($myfile);
-        ?> 
+        ?>
       </div>
 
 
