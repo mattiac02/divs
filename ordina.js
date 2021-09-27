@@ -3,12 +3,12 @@ $(document).ready(
     $("#main")[0].style.display = "flex";
     $("#main")[0].style.flexDirection = "column";
     $("#order").click(function() {
-      $("#main div").forEach(div => {
+      [...$("#main div")].forEach(div => {
         div.style.order = div.id;
       });
     });
     $("#ord").on("change", e => {
-      const direction = e.target.value == "<" ? "column" : "column-reverse";
+      const direction = e.target.value == ">" ? "column" : "column-reverse";
       $("#main")[0].style.flexDirection = direction;
     });
 
